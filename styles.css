@@ -1,0 +1,273 @@
+/* RESET E BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding: 20px 100px;
+    background-color: #fff;
+    color: #333;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* HEADER */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 80px;
+}
+
+.botao-menu {
+    width: 60px;
+    cursor: pointer;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.conteudo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.textos {
+    max-width: 600px;
+}
+
+h2 {
+    color: #333;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+span {
+    color: #017143;
+    font-size: 70px;
+    font-weight: 900;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* BOTÃO */
+button {
+    background: #017143;
+    color: white;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    font-size: 16px;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: #018950;
+}
+
+/* IMAGEM */
+.imagem {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagem-copo {
+    width: 340px;
+    max-width: 100%;
+}
+
+/* CÍRCULO DECORATIVO */
+.circulo {
+    background: #017143;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(600px at right 800px);
+    z-index: -1;
+}
+
+/* ANIMAÇÃO */
+.fade-in {
+    animation: fadeIn 1s ease-in both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imagem {
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    span {
+        font-size: 50px;
+    }
+
+    .imagem-copo {
+        width: 240px;
+    }
+
+    .circulo {
+        clip-path: circle(400px at center);
+    }
+}
+/* === MENU FIXO === */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #017143;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #018950;
+}
+
+body {
+    scroll-behavior: smooth;
+    padding-top: 100px; /* espaço pro menu fixo */
+}
+
+/* === PRODUTOS === */
+.produtos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.produtos h3 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #f9f9f9;
+    border-radius: 20px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.card h4 {
+    color: #017143;
+    margin-bottom: 10px;
+}
+
+/* === CONTATO === */
+.contato {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contato h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contato p {
+    font-size: 16px;
+}
+
+/* === RODAPÉ === */
+.rodape {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+.rodape img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.rodape .redes {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.rodape .redes img {
+    width: 30px;
+    filter: brightness(0) invert(1);
+}
